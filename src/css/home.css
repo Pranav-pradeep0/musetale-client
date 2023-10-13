@@ -1,33 +1,33 @@
-.unregistered-home-contents{
+.unregistered-home-contents {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.blogs-display{
+.blogs-display {
     display: flex;
     margin-inline: 20px;
 }
 
-.nav-drop-menu{
+.nav-drop-menu {
     margin-left: -100px;
 }
 
-.create-card{
+.create-card {
     max-width: 900px;
     padding-inline: 1.5%;
 }
 
-.offcanvas{
-    height: 60vh !important;
+.offcanvas {
+    height: 75vh !important;
 }
 
-.profile-conainer{
+.profile-conainer {
     justify-content: space-evenly;
     margin-inline: 80px;
 }
 
-.edit-input{
+.edit-input {
     font-size: 40px;
     text-align: center;
     margin: 0;
@@ -36,7 +36,7 @@
     transition: .3s ease-in-out;
 }
 
-.edit-textarea{
+.edit-textarea {
     outline: none;
     border: none;
     font-size: 18px;
@@ -44,13 +44,13 @@
     margin: 0px;
 }
 
-.edit-textarea:focus{
+.edit-textarea:focus {
     border: none !important;
     outline: none !important;
     box-shadow: none;
 }
 
-.title-edit-input{
+.title-edit-input {
     border: none;
     box-shadow: none;
     outline: none;
@@ -59,17 +59,17 @@
     font-size: 26px;
 }
 
-.log-inputs:focus{
+.log-inputs:focus {
     box-shadow: none;
 }
 
-.title-edit-input:focus{
+.title-edit-input:focus {
     border: none;
     box-shadow: none;
     outline: none;
 }
 
-.recomended{
+.recomended {
     display: flex;
     margin-inline: 20px;
 }
@@ -77,51 +77,73 @@
 
 @media(width > 1450px) {
 
-    .blog-card{
+    .blog-card {
         width: 980px;
         margin-inline: 50px;
     }
 
 }
 
-@media(width <= 1450px) {
+@media(width <=1450px) {
 
-    .blog-card{
+    .blog-card {
         width: 60vw;
     }
 
 }
 
-@media(width <= 1060px) {
+@media(width <=1060px) {
 
-    .blog-card{
+    .blog-card {
         width: 90vw;
         margin-inline: 20px;
     }
 
-    .recomendation-card{
+    .recomendation-card {
         width: 15rem !important;
     }
 
 }
 
-.divider{
+.divider {
     width: 1px;
     background-color: #313131;
 }
 
-.log-inputs{
+.log-inputs {
     border: none;
     border-bottom: 2px solid;
     border-radius: 0px;
     outline: none;
 }
 
-.log-inputs::placeholder{
+.log-inputs::placeholder {
     color: #aaaaaa !important;
 }
 
-.login-mods-btn{
+.login-mods-btn {
     background-color: #2b2b2b;
 }
 
+.pagination li {
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.pagination li.active {
+    background-color: #0055b1;
+    color: #fff;
+}
+
+.pagination li.previous, .pagination li.next {
+    font-weight: bold;
+}
+
+.pagination li.break {
+    margin: 0 5px;
+}
+
+.pagination li:hover {
+    background-color: #1a1a1a;
+}

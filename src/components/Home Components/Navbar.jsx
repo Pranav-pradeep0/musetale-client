@@ -45,8 +45,8 @@ const Navbar = () => {
     const response = await registerLogic(data, headerConfig)
 
     if (response.status == 201) {
-      // window.location.reload();
-      window.location.href = `${BASE_URL}/home`;
+      window.location.reload();
+      // window.location.href = "/home";
       // console.log(response);
     }
 
@@ -88,7 +88,9 @@ const Navbar = () => {
 
       setTimeout(() => {
 
-        window.location.href = `${BASE_URL}/home`;
+        // window.location.href = "/home";
+
+        window.location.reload();
 
       }, 1500)
     }
@@ -115,6 +117,15 @@ const Navbar = () => {
     setSignindata({ ...signinData, [e.target.name]: e.target.value })
   }
 
+  const signinUsernameinput = (e) => {
+    const lowercaseValue = e.target.value.toLowerCase();
+    setSignindata({ ...signinData, [e.target.name]: lowercaseValue })
+  }
+
+  const handleusernameinput = (e) => {
+    const lowercaseValue = e.target.value.toLowerCase();
+    setRegisterData({ ...registerData, [e.target.name]: lowercaseValue });
+  };
 
   const logoutFunct = () => {
     localStorage.clear()
@@ -306,7 +317,7 @@ const Navbar = () => {
                         <p class="text-center m-0 p-0">or:</p>
 
                         <div className='mb-4 mt-2'>
-                          <input type="text" id='uname' className='form-control log-inputs' placeholder='Username' value={signinData.username} name='username' onChange={signininput} />
+                          <input type="text" id='uname' className='form-control log-inputs' placeholder='Username' value={signinData.username} name='username' onChange={signinUsernameinput} />
                         </div>
 
                         <div className='mb-4'>
@@ -367,7 +378,7 @@ const Navbar = () => {
 
                         {/* <!-- Username input --> */}
                         <div className='mb-4'>
-                          <input type="text" className='form-control log-inputs' placeholder='Username' value={registerData.username} name='username' onChange={signupinput} />
+                          <input type="text" className='form-control log-inputs' placeholder='Username' value={registerData.username} name='username' onChange={handleusernameinput} />
                         </div>
 
                         {/* <!-- Email input --> */}
@@ -453,7 +464,7 @@ const Navbar = () => {
                         <p class="text-center m-0 p-0">or:</p>
 
                         <div className='mb-4 mt-2'>
-                          <input type="text" id='uname' className='form-control log-inputs' placeholder='Username' value={signinData.username} name='username' onChange={signininput} />
+                          <input type="text" id='uname' className='form-control log-inputs' placeholder='Username' value={signinData.username} name='username' onChange={signinUsernameinput} />
                         </div>
 
                         <div className='mb-4'>
@@ -514,7 +525,7 @@ const Navbar = () => {
 
                         {/* <!-- Username input --> */}
                         <div className='mb-4'>
-                          <input type="text" className='form-control log-inputs' placeholder='Username' value={registerData.username} name='username' onChange={signupinput} />
+                          <input type="text" className='form-control log-inputs' placeholder='Username' value={registerData.username} name='username' onChange={handleusernameinput} />
                         </div>
 
                         {/* <!-- Email input --> */}
@@ -524,7 +535,7 @@ const Navbar = () => {
 
                         {/* <!-- Password input --> */}
                         <div className='mb-5'>
-                          <input type="text" className='form-control log-inputs' placeholder='Password' value={registerData.password} name='password' onChange={signupinput} />
+                          <input type="password" className='form-control log-inputs' placeholder='Password' value={registerData.password} name='password' onChange={signupinput} />
                         </div>
 
                         <div className='mb-5 d-flex'>
