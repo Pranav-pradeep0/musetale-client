@@ -17,6 +17,8 @@
     "react-refresh": "^0.14.0",
     "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
+    "react-scroll-progress-bar": "^1.1.13",
+    "svelte-spa-router": "^3.3.0",
     "sweetalert2": "^11.7.32",
     "web-vitals": "^2.1.4"
   },

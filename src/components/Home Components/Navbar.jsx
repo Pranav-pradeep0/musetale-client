@@ -234,7 +234,7 @@ const Navbar = () => {
               </Link>
 
               {/* <!-- Toggle button --> */}
-              <button
+              {/* <button
                 class="navbar-toggler"
                 type="button"
                 data-mdb-toggle="collapse"
@@ -244,10 +244,10 @@ const Navbar = () => {
                 aria-label="Toggle navigation"
               >
                 <i class="fas fa-bars"></i>
-              </button>
+              </button> */}
 
               {/* <!-- Collapsible wrapper --> */}
-              <div class="collapse navbar-collapse" id="navbarButtonsExample">
+              <div class="" id="navbarButtonsExample">
                 {/* <!-- Left links --> */}
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   {/* <li class="nav-item">

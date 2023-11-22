@@ -64,7 +64,7 @@ const UserBlogs = () => {
             }
 
             {currentUSerPosts.map((post, index) => (
-                <div key={post._id} className='card blog-card bg-dark'>
+                <div key={post._id} className='card blog-card bg-dark mb-5'>
                     <div className='card-header d-grid'>
                         <div>
                             {editInfo.postId === post._id ?
@@ -93,6 +93,7 @@ const UserBlogs = () => {
                         {editInfo.postId === post._id ?
                             <textarea
                                 className='form-control edit-textarea'
+                                
                                 value={editInfo.editedContent}
                                 onChange={(e) =>
                                     setEditInfo({
